@@ -20,3 +20,12 @@ build:
         name: go build
         code: |
           go build -o hugo main.go
+
+deploy:
+  # Steps that will be executed after a successful build
+    steps:
+    
+    - script:
+        name: deploy binary
+        code: |
+         cp hugo $WERCKER_OUTPUT_DIR
