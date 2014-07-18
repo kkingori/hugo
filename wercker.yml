@@ -22,8 +22,6 @@ build:
           go build -o hugo main.go
 
 deploy:
-  # Steps that will be executed after a successful build
     steps:
-    
-    - script:
-        name: deploy pre-release
+        - heroku-deploy:
+            key-name: HEROKU_KEY
