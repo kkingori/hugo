@@ -26,6 +26,4 @@ deploy:
     steps:
     
     - script:
-        name: deploy binary
-        code: |
-         cp hugo $WERCKER_OUTPUT_DIR
+        name: deploy pre-release
